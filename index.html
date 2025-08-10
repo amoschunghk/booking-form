@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>課堂預約表單</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>課堂預約表單</h1>
+        <form name="contact" method="POST" data-netlify="true">
+            <input type="hidden" name="form-name" value="contact">
+            
+            <div class="form-group">
+                <label for="student-name">學生姓名 *</label>
+                <input type="text" id="student-name" name="student-name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="parent-phone">家長聯絡電話 *</label>
+                <input type="tel" id="parent-phone" name="parent-phone" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">電郵 *</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="class-type">課堂類型 *</label>
+                <select id="class-type" name="class-type" required>
+                    <option value="">請選擇課堂類型</option>
+                    <option value="1對1">1對1</option>
+                    <option value="小組">小組</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="date">日期 *</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="time">時間 *</label>
+                <input type="time" id="time" name="time" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="notes">備註</label>
+                <textarea id="notes" name="notes" rows="4" placeholder="請輸入任何額外資訊或特殊需求"></textarea>
+            </div>
+            
+            <button type="submit">提交</button>
+        </form>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
